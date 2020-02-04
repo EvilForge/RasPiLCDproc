@@ -1,0 +1,18 @@
+[Unit]
+Description=GPIO Interface Controls Script
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/gpio_controls.py start
+ExecStop=/usr/bin/python3 /usr/local/bin/gpio_controls.py stop
+WorkingDirectory=/usr/local/bin
+StandardInput=tty-force
+StandardOutput=inherit
+StandardError=inherit
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
