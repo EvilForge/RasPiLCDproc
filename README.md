@@ -1,5 +1,5 @@
-# RasPi3BLCDProc
-Implementation and saved config files on Raspberry Pi 3b+ LCDProc installation.
+# RasPiLCDProc
+Implementation and saved config files on Raspberry Pi 4/3b+ LCDProc installation.
 
 ## Overview:
 I want to use my RasPi as a desktop and not have to spin up my gaming system, while I work from my corporate laptop. Lots of reasons.. noise, power use, etc, and I share monitors. But all I really do is watch email and browse on the desktop during work hours. So a small RasPi makes perfect sense. And, since I have a couple and I like to tinker.. I can make things more useful if I had a separate simple LCD screen driven by the RasPi, that showed me email status, let me control MP3 players, and showed the time.  
@@ -8,7 +8,7 @@ Enter LCDproc. A client server software thing for Linux. A software daemon/servi
 
 Kind of old fashioned. But I happen to have lots of LCD char screens laying around too. ANd yeah, I get I could just buy a DEX setup for my phone, or prop up the tablet, but I like running on the 4k monitor, and having a real keyboard and mouse, and... well phones take up too much of people's lives anyhow right?
 
-So, I am trying to set up one of my RRaspberry Pi 3B+ devices with LCDProc, and a LCD screen I got from Banggood. My configuration is the LCD is 4x20 with a PCF8574 16 pin surface mount chip, and it uses the "alternate" wiring config.
+So, I am trying to set up one of my RRaspberry Pi 3B+/4 devices with LCDProc, and a LCD screen I got from Banggood. My configuration is the LCD is 4x20 with a PCF8574 16 pin surface mount chip, and it uses the "alternate" wiring config.
 
 I found lots of references to how to set all this up but nothing appeared complete for a guide. I am trying to document what I have working here, and what all I needed, in one place, because I know that at some point, I'll need it again.
 
@@ -75,4 +75,4 @@ sudo kill -15 #### (whatever process id you get, send the kill 15 signal to it u
 
 So, I get the hello and goodbye now. So LCDd is talking correctly to the display. And some further configuration settings in the lcdproc.conf file and now I have a functional system! (Remember, you have to launch lcdproc like you did LCDd... LCDd = listener, lcdproc = client sending stuff to be displayed.) Claws mail even has a plugin for LCDProc, and there are some supposedly easy to implement scripts for qmmp to send track changes to the LCD. 
 
-(update 2/3/20 - I moved over to a 4GB RasPi4, and this proces works still for me to set the new RasPi up. This time I will not set the LCD and lcdproc to start automatically at boot. Instead I have a GPIO monitoring script I will use, to control power to the system fan, LCD, and watch buttons or start/halt, and it will launch the LCDproc stuff. ) 
+Update 2/3/20 - I moved over to a 4GB RasPi4, and this proces works still for me to set the new RasPi up. This time I will not set the LCD and lcdproc to start automatically at boot. Instead I have a GPIO monitoring script I will use, to control power to the system fan, LCD, and watch buttons or start/halt, and it will launch the LCDproc stuff. I have provided the script and service file for it in the GPIO service files folder.
