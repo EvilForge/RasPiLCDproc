@@ -12,6 +12,8 @@ So, I am trying to set up one of my RRaspberry Pi 3B+/4 devices with LCDProc, an
 
 I found lots of references to how to set all this up but nothing appeared complete for a guide. I am trying to document what I have working here, and what all I needed, in one place, because I know that at some point, I'll need it again.
 
+If you feel like it, feel free to [buy me a coffee!](https://www.buymeacoffee.com/rbef)
+
 ## Links:
 Awesome link about how the whole custom pin thing was added to LCDProc. BUT watch out - that last example uses 0x80 for both the back-light and D7. That got me for a while.. see my configs for what worked for me.  https://sourceforge.net/p/lcdproc/discussion/312/thread/00298b2f/
 
